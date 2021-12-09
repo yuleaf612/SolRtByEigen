@@ -92,6 +92,7 @@ int solTRByEigen(double dR[][3], double *dT, double(*vPtp)[3], double(*vPtq)[3],
 		V(0, 0) = -V(0, 0);
 		V(1, 0) = -V(1, 0);
 		V(2, 0) = -V(2, 0);
+		R = V * U.transpose();
 	}
 	MatrixXd T(3, 1);
 	T = (-1)*R*AvgP + AvgQ;
